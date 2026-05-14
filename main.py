@@ -77,16 +77,16 @@ class ConnectFour:
 
     # stampa griglia attuale
     def print_board(self):
-        print(" ".join(str(c) for c in range(COLS)))
+        print(" ".join(f"|{c}|" for c in range(COLS)))
         for row in self.board:
             line = ""
             for cell in row:
                 if cell == 0:
-                    line += "."
+                    line += "[ ]"
                 elif cell == 1:
-                    line += "X"
+                    line += "[X]"
                 else:
-                    line += "O"
+                    line += "[O]"
                 line += " "
             print(line)
         print()
